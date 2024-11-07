@@ -1,0 +1,149 @@
+/* Основная структура */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Верхняя панель */
+.header {
+    width: 100%;
+    height: 92px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header .logo {
+    font-size: 36px;
+    font-weight: 700;
+    color: #434343;
+}
+
+.header .buttons button {
+    background: #1BA441;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Основное содержимое */
+.content {
+    display: flex;
+    width: 100%;
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+/* Левое боковое меню */
+.sidebar {
+    width: 300px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-item {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar-item.active, .sidebar-item:hover {
+    background-color: #1BA441;
+    color: #FFFFFF;
+}
+
+/* Основной блок отзывов */
+.main-content {
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.review-text {
+    flex-grow: 1;
+    font-size: 15px;
+    color: #333;
+    margin-left: 20px;
+}
+
+.review-rating {
+    font-size: 16px;
+    color: #FFD700;
+}
+
+/* Футер */
+.footer {
+    width: 100%;
+    background-color: #1BA441;
+    color: #FFFFFF;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
