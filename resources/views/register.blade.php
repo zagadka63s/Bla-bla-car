@@ -15,6 +15,7 @@
             <h2>Реєстрація в GoTogether</h2>
             <form action="{{ route('register') }}" method="POST">
                 @csrf
+<<<<<<< HEAD
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Ім'я:</label>
@@ -89,10 +90,62 @@
                     <input type="checkbox" id="agreement" name="agreement" required>
                     <label for="agreement">Я погоджуюсь з <a href="{{ url('terms-of-use') }}">умовами використання</a> і <a href="{{ url('terms') }}">політикою конфіденційності</a>.</label>
                 </div>
+=======
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="gender">Стать:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Оберіть стать</option>
+                    <option value="male">Чоловік</option>
+                    <option value="female">Жінка</option>
+                </select>
+
+                <label for="phone">Номер телефону:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="email">Електронна пошта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="password_confirmation">Підтвердження пароля:</label>
+                <input type="password" id="password_confirmation" name="password_confirmation" required>
+
+                <label for="birthdate">Дата народження:</label>
+                <div class="birthdate-fields">
+                    <select name="day" required>
+                        <option value="">День</option>
+                        @for ($i = 1; $i <= 31; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                    </select>
+                    <select name="month" required>
+                        <option value="">Місяць</option>
+                        @for ($i = 1; $i <= 12; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                    </select>
+                    <select name="year" required>
+                        <option value="">Рік</option>
+                        @for ($i = now()->year; $i >= 1900; $i--)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                    </select>
+                </div>
+
+                <div class="agreement">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Я погоджуюсь з <a href="#">умовами використання</a> і <a href="#">політикою конфіденційності</a>.</label>
+                </div>
+
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                 <button type="submit">Зареєструватися</button>
             </form>
         </div>
     </div>
+<<<<<<< HEAD
 
     <script>
         function togglePassword() {
@@ -109,5 +162,7 @@
             });
         }
     </script>
+=======
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 </body>
 </html>

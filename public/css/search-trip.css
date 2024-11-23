@@ -3,13 +3,21 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
 }
 
+=======
+    overflow-x: hidden;
+}
+
+/* Верхняя панель навигации */
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 .top-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
+<<<<<<< HEAD
     padding: 20px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -242,11 +250,113 @@ body {
 .search-results {
     flex: 2;
     max-width: 700px;
+=======
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.top-navigation h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #434343;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: #1BA441;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #158c34;
+}
+
+.user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Основной контейнер страницы поиска */
+.search-trip-container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    width: 85%;
+    max-width: 1300px;
+    margin: 120px auto 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Левая колонка с фильтрами */
+.search-filters {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-filters label,
+.search-filters input,
+.search-filters select {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.search-filters input[type="range"] {
+    width: 100%;
+}
+
+.search-filters input,
+.search-filters select {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1BA441;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Правая колонка со списком водителей */
+.search-results {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.driver-list {
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+<<<<<<< HEAD
 .driver-photo {
     flex: 0 0 90px; /* Уменьшаем размер фото */
     margin-right: 20px;
@@ -324,4 +434,66 @@ body {
 
 .footer-links a:hover {
     color: #CCCCCC;
+=======
+.driver-card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    align-items: center;
+}
+
+.driver-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.driver-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.reserve-button {
+    padding: 10px;
+    background-color: #1BA441;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.reserve-button:hover {
+    background-color: #158c34;
+}
+
+/* Нижняя панель навигации (footer) */
+.footer {
+    background-color: #1BA441;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 }

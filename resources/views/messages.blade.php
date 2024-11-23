@@ -19,7 +19,11 @@
         </div>
 
         <!-- Основное содержимое страницы -->
+<<<<<<< HEAD
         <div class="content">
+=======
+        <div class="content" style="display: flex; margin-top: 30px;">
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
             <!-- Левое боковое меню -->
             <div class="sidebar">
                 <a href="{{ route('profile') }}" class="sidebar-item">Мій профіль</a>
@@ -33,7 +37,10 @@
 
             <!-- Основной блок с сообщениями -->
             <div class="main-content">
+<<<<<<< HEAD
                 <h2>Ваші повідомлення</h2>
+=======
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                 <div class="message-list">
                     <div class="message-item">
                         <img src="{{ asset('images/user1.png') }}" alt="User">
@@ -62,12 +69,18 @@
         <!-- Футер -->
         <div class="footer">
             <div>©GoTogether - 2024 | Всі права захищені</div>
+<<<<<<< HEAD
             <div class="footer-links">
                 <a href="#">FAQ</a>
                 <a href="#">Умови користування</a>
                 <a href="#">Політика конфіденційності</a>
                 <a href="#">Контакти</a>
             </div>
+=======
+            <div>Контакти</div>
+            <div>Політика конфіденційності</div>
+            <div>Умови користування</div>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
         </div>
     </div>
 </body>

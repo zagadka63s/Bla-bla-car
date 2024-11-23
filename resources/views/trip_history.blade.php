@@ -12,9 +12,16 @@
         <div class="header">
             <div class="logo">GoTogether</div>
             <div class="buttons">
+<<<<<<< HEAD
                 <a href="{{ route('trip.search') }}"><button class="main-button">Знайти поїздку</button></a>
                 <a href="{{ route('trip.create') }}"><button class="main-button">Створити поїздку</button></a>
             </div>
+=======
+                <a href="{{ route('trip.search') }}"><button>Знайти поїздку</button></a>
+                <a href="{{ route('trip.create') }}"><button>Створити поїздку</button></a>
+            </div>
+            <div class="profile-icon"></div>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
         </div>
 
         <!-- Основное содержимое страницы -->
@@ -40,7 +47,11 @@
                             <div class="route">Київ - Львів</div>
                             <div class="date">Дата: 15 Січня 2024</div>
                         </div>
+<<<<<<< HEAD
                         <button class="review-button">Залишити відгук</button>
+=======
+                        <button class="review-button" onclick="openModal()">Залишити відгук</button>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                     </div>
                     <div class="trip-item">
                         <img src="{{ asset('images/user2.png') }}" alt="User">
@@ -48,13 +59,39 @@
                             <div class="route">Одеса - Харків</div>
                             <div class="date">Дата: 20 Січня 2024</div>
                         </div>
+<<<<<<< HEAD
                         <button class="review-button">Залишити відгук</button>
+=======
+                        <button class="review-button" onclick="openModal()">Залишити відгук</button>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                     </div>
                 </div>
                 <a href="{{ url()->previous() }}" class="back-button">Назад</a>
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- Модальное окно отзыва -->
+        <div id="reviewModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Ваш відгук</h2>
+                <img src="{{ asset('images/user1.png') }}" alt="User" class="user-avatar">
+                <p><strong>Ваша оцінка:</strong></p>
+                <select class="rating">
+                    <option value="5">5 зірок</option>
+                    <option value="4">4 зірки</option>
+                    <option value="3">3 зірки</option>
+                    <option value="2">2 зірки</option>
+                    <option value="1">1 зірка</option>
+                </select>
+                <textarea class="review-text" placeholder="Напишіть свій відгук..."></textarea>
+                <button class="submit-button">Надіслати</button>
+            </div>
+        </div>
+
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
         <!-- Футер -->
         <div class="footer">
             <div>©GoTogether - 2024 | Всі права захищені</div>
@@ -66,5 +103,18 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+
+    <script>
+        function openModal() {
+            document.getElementById("reviewModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("reviewModal").style.display = "none";
+        }
+    </script>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 </body>
 </html>

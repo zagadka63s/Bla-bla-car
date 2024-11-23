@@ -19,7 +19,11 @@
         </div>
 
         <!-- Основное содержимое страницы -->
+<<<<<<< HEAD
         <div class="content">
+=======
+        <div class="content" style="display: flex;">
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
             <!-- Левое боковое меню -->
             <div class="sidebar">
                 <a href="{{ route('profile') }}" class="sidebar-item active">Мій профіль</a>
@@ -41,19 +45,31 @@
                 </div>
                 <div class="buttons">
                     <button class="edit-button">Редагувати профіль</button>
+<<<<<<< HEAD
                     <a href="{{ url()->previous() }}" class="back-button">Назад</a>
+=======
+                    <button class="back-button" onclick="window.history.back()">Назад</button>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                 </div>
             </div>
         </div>
 
         <!-- Футер -->
         <div class="footer">
+<<<<<<< HEAD
             <div>©GoTogether - 2024 | Всі права захищені</div>
             <div class="footer-links">
                 <a href="#">FAQ</a>
                 <a href="#">Умови користування</a>
                 <a href="#">Політика конфіденційності</a>
                 <a href="#">Контакти</a>
+=======
+            <p>&copy; GoTogether - 2024 | Всі права захищені</p>
+            <div class="footer-links">
+                <a href="#">Контакти</a>
+                <a href="#">Політика конфіденційності</a>
+                <a href="#">Умови користування</a>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
             </div>
         </div>
     </div>

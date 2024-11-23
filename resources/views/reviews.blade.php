@@ -32,7 +32,11 @@
 
             <!-- Основной блок отзывов -->
             <div class="main-content">
+<<<<<<< HEAD
                 <h2>Відгуки</h2>
+=======
+                <h1>Відгуки</h1>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                 <div class="review-list">
                     <div class="review-item">
                         <div class="user-info">
@@ -50,18 +54,30 @@
                         <div class="review-text">Дуже сподобався водій і організація.</div>
                         <div class="review-rating">5.0 ★</div>
                     </div>
+<<<<<<< HEAD
+=======
+                    <!-- Добавьте другие отзывы здесь -->
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                 </div>
             </div>
         </div>
 
         <!-- Футер -->
         <div class="footer">
+<<<<<<< HEAD
             <div>©GoTogether - 2024 | Всі права захищені</div>
             <div class="footer-links">
                 <a href="#">FAQ</a>
                 <a href="#">Умови користування</a>
                 <a href="#">Політика конфіденційності</a>
                 <a href="#">Контакти</a>
+=======
+            <p>&copy; GoTogether - 2024 | Всі права захищені</p>
+            <div class="footer-links">
+                <a href="#">Контакти</a>
+                <a href="#">Політика конфіденційності</a>
+                <a href="#">Умови користування</a>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
             </div>
         </div>
     </div>

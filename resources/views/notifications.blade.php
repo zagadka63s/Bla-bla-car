@@ -32,22 +32,38 @@
 
             <!-- Основной блок уведомлений -->
             <div class="main-content">
+<<<<<<< HEAD
                 <h2>Ваши уведомления</h2>
                 <div class="notification-list">
                     <div class="notification-item">Нове повідомлення від Вікторії</div>
                     <div class="notification-item">Ваш рейс на 23 жовтня підтверджено</div>
+=======
+                <h1>Ваши уведомления</h1>
+                <div class="notification-list">
+                    <div class="notification-item">Нове повідомлення від Вікторії</div>
+                    <div class="notification-item">Ваш рейс на 23 жовтня підтверджено</div>
+                    <!-- Добавьте другие уведомления здесь -->
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                 </div>
             </div>
         </div>
 
         <!-- Футер -->
         <div class="footer">
+<<<<<<< HEAD
             <div>©GoTogether - 2024 | Всі права захищені</div>
             <div class="footer-links">
                 <a href="#">FAQ</a>
                 <a href="#">Умови користування</a>
                 <a href="#">Політика конфіденційності</a>
                 <a href="#">Контакти</a>
+=======
+            <p>&copy; GoTogether - 2024 | Всі права захищені</p>
+            <div class="footer-links">
+                <a href="#">Контакти</a>
+                <a href="#">Політика конфіденційності</a>
+                <a href="#">Умови користування</a>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
             </div>
         </div>
     </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -23,17 +24,41 @@ body {
     justify-content: space-between;
     padding: 20px 60px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+=======
+/* Общие стили для контейнера */
+.container {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для верхней панели */
+.header {
+    width: 100%;
+    background-color: #1BA441;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 }
 
 .header .logo {
     font-size: 24px;
     font-weight: bold;
+<<<<<<< HEAD
     color: #434343;
 }
 
 .header .buttons {
     display: flex;
     gap: 10px;
+=======
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 }
 
 .header .buttons button {
@@ -41,6 +66,7 @@ body {
     color: white;
     border: none;
     padding: 10px 20px;
+<<<<<<< HEAD
     border-radius: 5px;
     cursor: pointer;
 }
@@ -62,6 +88,16 @@ body {
     margin-right: 20px;
     background-color: #FFFFFF;
     border-radius: 10px;
+=======
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Стили для бокового меню */
+.sidebar {
+    width: 200px;
+    background-color: #F9F9F9;
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     padding: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
@@ -69,11 +105,18 @@ body {
 .sidebar-item {
     display: block;
     padding: 15px;
+<<<<<<< HEAD
     margin-bottom: 10px;
     background-color: #F9F9F9;
     color: #333;
     text-decoration: none;
     border-radius: 10px;
+=======
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 8px;
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     transition: background 0.3s;
 }
 
@@ -82,6 +125,7 @@ body {
     color: white;
 }
 
+<<<<<<< HEAD
 /* Основной блок */
 .main-content {
     flex: 1;
@@ -101,6 +145,22 @@ body {
     background-color: #F9F9F9;
     border-radius: 10px;
     padding: 20px;
+=======
+/* Стили для основного содержимого */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.profile-details {
+    padding: 15px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     margin-bottom: 20px;
 }
 
@@ -119,19 +179,33 @@ body {
 }
 
 .edit-button:hover, .back-button:hover {
+<<<<<<< HEAD
     background-color: #169c34;
 }
 
 /* Футер */
 .footer {
+=======
+    background-color: #148C33;
+}
+
+/* Стили для футера */
+.footer {
+    width: 100%;
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     background-color: #1BA441;
     color: white;
     text-align: center;
     padding: 20px 0;
+<<<<<<< HEAD
     margin-top: auto;
 }
 
 .footer-links {
+=======
+    position: relative;
+    bottom: 0;
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     display: flex;
     justify-content: center;
     gap: 20px;

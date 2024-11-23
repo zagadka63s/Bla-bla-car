@@ -19,10 +19,14 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="password">Пароль</label>
+<<<<<<< HEAD
                 <div class="password-container">
                     <input type="password" id="password" name="password" required>
                     <span class="toggle-password" onclick="togglePassword()">👁</span>
                 </div>
+=======
+                <input type="password" id="password" name="password" required>
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 
                 <button type="submit">Увійти</button>
 
@@ -33,6 +37,7 @@
             </form>
         </div>
     </div>
+<<<<<<< HEAD
 
     <script>
         function togglePassword() {
@@ -47,5 +52,7 @@
             }
         }
     </script>
+=======
+>>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 </body>
 </html>
