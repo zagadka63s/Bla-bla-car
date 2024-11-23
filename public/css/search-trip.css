@@ -1,0 +1,327 @@
+body {
+    background-color: #D9D9D9;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.nav-buttons .nav-button {
+    margin-left: 10px;
+    background-color: #1BA441;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-buttons .nav-button:hover {
+    background-color: #158c34;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    max-width: 1300px;
+    margin: 50px auto 0;
+    gap: 40px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    max-width: 450px;
+}
+
+.form-container {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-trip-form h1,
+.dodatkovo-container h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #AAAAAA;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-input:hover,
+.form-select:hover {
+    border-color: #1BA441;
+}
+
+.range-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.range-min,
+.range-max {
+    font-size: 14px; /* Размер текста */
+    color: #333; /* Цвет текста */
+    width: 50px; /* Ширина контейнера */
+    text-align: center; /* Центрируем текст */
+}
+.range-track {
+    position: relative;
+    width: 100%; /* Полная ширина */
+    height: 8px; /* Высота трека */
+    background: #ddd; /* Серый фон трека */
+    border-radius: 5px; /* Округление трека */
+    overflow: hidden; /* Скрываем выступающее содержимое */
+    margin: 0 10px; /* Отступы между числами и треком */
+}
+
+.range-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #1BA441; /* Зеленый цвет заполнения */
+    width: 0%; /* Начальное заполнение */
+    z-index: 1;
+    transition: width 0.3s ease-in-out; /* Плавное изменение ширины */
+}
+
+.form-range {
+    position: relative;
+    width: 100%; /* Ширина совпадает с треком */
+    height: 8px; /* Высота совпадает с треком */
+    background: transparent; /* Прозрачный фон */
+    outline: none;
+    z-index: 2;
+    -webkit-appearance: none; /* Скрываем стандартный вид браузера */
+    appearance: none;
+    cursor: pointer; /* Указатель мыши */
+}
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Ширина кружка */
+    height: 20px; /* Высота кружка */
+    background: #1BA441; /* Цвет кружка */
+    border-radius: 50%; /* Закругленный кружок */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+.form-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #1BA441;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.range-value {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1BA441;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.search-button,
+.reset-button {
+    background-color: #1BA441;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+}
+
+.reset-button {
+    background-color: #CCCCCC;
+    color: #333;
+}
+
+.search-button:hover {
+    background-color: #158c34;
+}
+
+.reset-button:hover {
+    background-color: #999;
+}
+
+.dodatkovo-container {
+    padding: 25px; /* Увеличиваем внутренний отступ */
+    background: #F9F9F9;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto; /* Позволяем блоку быть адаптивным */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Пространство между элементами */
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Чекбоксы внутри "Додатково" */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Расстояние между чекбоксом и текстом */
+    margin-bottom: 15px; /* Отступ между строками */
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #1BA441;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC; /* Тонкая рамка */
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold; /* Жирный текст для чёткости */
+}
+
+.checkbox-item:hover label {
+    color: #1BA441;
+}
+
+.search-results {
+    flex: 2;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.driver-photo {
+    flex: 0 0 90px; /* Уменьшаем размер фото */
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 90px; /* Равномерный размер */
+    height: 90px; /* Равномерный размер */
+    border-radius: 50%; /* Закругление */
+    object-fit: cover;
+    border: 2px solid #1BA441; /* Толщина рамки */
+}
+.driver-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #1BA441; /* Уменьшенная толщина зелёной рамки */
+    padding: 20px;
+    border-radius: 10px; /* Слегка увеличили закругление */
+    transition: transform 0.2s ease;
+}
+.driver-block:hover {
+    transform: scale(1.03); /* Легкое увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.driver-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.driver-info {
+    flex: 1;
+}
+
+.driver-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Footer */
+.bottom-navigation {
+    background-color: #1BA441;
+    padding: 20px 40px;
+    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-container p {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #CCCCCC;
+}

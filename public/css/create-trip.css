@@ -1,0 +1,156 @@
+body {
+    background-color: #D9D9D9;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Верхняя панель (header) */
+.top-navigation {
+    position: fixed;
+    width: 100vw;
+    height: 92px;
+    top: 0;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.logo-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #434343;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: #1BA441;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #158c34;
+}
+
+/* Страница создания поездки */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Выравниваем контейнеры по высоте */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: calc(100vh - 184px); /* Учитываем высоту top-navigation и footer */
+    box-sizing: border-box;
+}
+
+.create-trip-form {
+    margin-left: calc(10%); /* Сдвиг вправо */
+    margin-top: 240px; /* Сдвиг вниз на 20px */
+}
+
+
+
+.form-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #404040;
+    margin-bottom: 10px;
+}
+
+.form-description {
+    color: #6A6A6A;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.create-trip-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #404040;
+}
+
+.create-trip-form input,
+.create-trip-form select {
+    width: 100%; /* Заполняет весь доступный контейнер */
+    height: 48px; /* Задаем одинаковую высоту */
+    box-sizing: border-box; /* Учитываем padding и border в ширине и высоте */
+    margin-bottom: 15px; /* Равномерный отступ между элементами */
+}
+
+
+.submit-button {
+    width: 100%; /* Ширина равна ширине текстовых полей */
+    height: 48px; /* Высота как у остальных элементов */
+    border: none; /* Убираем черную рамку */
+    border-radius: 8px; /* Округленные углы */
+    background-color: #1BA441; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    font-weight: bold; /* Жирный текст */
+    padding: 10px 20px; /* Внутренние отступы */
+    text-align: center; /* Центрируем текст */
+    cursor: pointer; /* Указатель мыши при наведении */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+.submit-button:hover {
+    background-color: #158c34; /* Темный зеленый при наведении */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень при наведении */
+}
+
+
+/* Изображение справа */
+.trip-image {
+    width: calc(100% - 50%); /* Используем оставшуюся ширину */
+    height: calc(100vh - 92px); /* Учитываем высоту только top-navigation */
+    background-image: url('/images/car_image.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0; /* Убираем лишние отступы */
+    padding: 0;
+    border-radius: 0; /* Убираем скругления, если они есть */
+    position: relative;
+}
+
+
+/* Футер */
+.footer {
+    position: fixed;
+    width: 100vw;
+    height: 92px; /* Делаем высоту, как у верхней панели */
+    bottom: 0;
+    background: #1BA441;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+    padding: 0 40px; /* Такой же отступ, как в top-navigation */
+    box-sizing: border-box; /* Убедимся, что padding входит в общую ширину */
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

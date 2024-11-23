@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Верхняя панель */
+.header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #434343;
+}
+
+.header .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header .buttons button {
+    background-color: #1BA441;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header .buttons button:hover {
+    background-color: #169c34;
+}
+
+/* Основное содержимое */
+.content {
+    display: flex;
+    flex: 1;
+    padding: 40px 60px;
+}
+
+/* Боковое меню */
+.sidebar {
+    width: 250px;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #F9F9F9;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.sidebar-item.active, .sidebar-item:hover {
+    background-color: #1BA441;
+    color: #FFFFFF;
+}
+
+/* Основной блок настроек */
+.main-content {
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.settings-section h3 {
+    font-size: 20px;
+    color: #1BA441;
+    margin-bottom: 10px;
+}
+
+.settings-section label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.settings-section input,
+.settings-section select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.save-button {
+    background-color: #1BA441;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #169c34;
+}
+
+/* Футер */
+.footer {
+    background-color: #1BA441;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer .footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .footer-links a:hover {
+    text-decoration: underline;
+}

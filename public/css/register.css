@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #F0F0F0;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    padding-right: 5%;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: -15%;
+    width: 70%;
+    height: 100%;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.form-container {
+    position: relative;
+    background: #FFFFFF;
+    padding: 50px; /* Увеличен padding для более просторного вида */
+    width: 750px; /* Увеличена ширина окна */
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin-right: 5%;
+}
+
+.form-container h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px; /* Немного увеличен заголовок */
+    margin-bottom: 30px; /* Больше отступ после заголовка */
+    color: #333;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    gap: 25px; /* Увеличено расстояние между элементами в строке */
+    margin-bottom: 20px; /* Увеличен отступ между строками */
+}
+
+.form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 10px; /* Увеличен отступ после метки */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    transition: border 0.3s;
+}
+
+input:focus,
+select:focus {
+    border: 1px solid #1BA441;
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 25px; /* Увеличен зазор между радиокнопками */
+    align-items: center;
+    font-size: 18px; /* Увеличен размер текста */
+}
+
+.radio-group input {
+    margin-right: 10px;
+    transform: scale(1.5); /* Увеличен размер радиокнопок */
+}
+
+button {
+    width: 100%;
+    height: 55px; /* Увеличена высота кнопки */
+    background-color: #1BA441;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px; /* Увеличен размер текста кнопки */
+    cursor: pointer;
+    margin-top: 30px; /* Увеличен отступ сверху кнопки */
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #179837;
+    transform: scale(1.05);
+}
+
+/* Контейнер для паролей */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    padding-right: 40px;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #808080;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.password-container .toggle-password:hover {
+    color: #333;
+}
+
+/* Дата рождения */
+.birthdate-fields {
+    display: flex;
+    gap: 15px; /* Увеличен зазор между полями */
+}
+
+.birthdate-fields select {
+    flex: 1;
+}
+
+/* Поле согласия */
+.form-group input[type="checkbox"] {
+    transform: scale(1.5); /* Увеличен размер чекбокса */
+    margin-right: 10px;
+}
+
+.agreement label {
+    font-size: 14px;
+    color: #666666;
+}
+
+.agreement a {
+    color: #1BA441;
+    text-decoration: underline;
+    font-size: 16px; /* Увеличен размер текста ссылок */
+    cursor: pointer;
+}
+
+.agreement a:hover {
+    color: #0E7A31; /* Цвет при наведении */
+}

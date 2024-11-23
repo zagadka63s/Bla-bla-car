@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Шапка */
+.header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #434343;
+}
+
+.header .buttons .main-button {
+    background-color: #1BA441;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header .buttons .main-button:hover {
+    background-color: #169c34;
+}
+
+/* Боковое меню */
+.sidebar {
+    width: 250px;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #F9F9F9;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.sidebar-item.active, .sidebar-item:hover {
+    background-color: #1BA441;
+    color: #ffffff;
+}
+
+/* Основное содержимое */
+.content {
+    display: flex;
+    flex: 1;
+    padding: 40px 60px;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trip-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.trip-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trip-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.trip-info {
+    flex: 1;
+}
+
+.review-button, .back-button {
+    background-color: #1BA441;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.review-button:hover, .back-button:hover {
+    background-color: #169c34;
+}
+
+/* Футер */
+.footer {
+    background-color: #1BA441;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}

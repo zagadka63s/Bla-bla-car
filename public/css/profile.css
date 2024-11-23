@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Шапка */
+.header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #434343;
+}
+
+.header .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header .buttons button {
+    background-color: #1BA441;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header .buttons button:hover {
+    background-color: #169c34;
+}
+
+/* Основной контент */
+.content {
+    display: flex;
+    flex: 1;
+    padding: 40px 60px;
+}
+
+/* Боковое меню */
+.sidebar {
+    width: 250px;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #F9F9F9;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar-item.active, .sidebar-item:hover {
+    background-color: #1BA441;
+    color: white;
+}
+
+/* Основной блок */
+.main-content {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    font-size: 24px;
+    color: #1BA441;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button, .back-button {
+    background-color: #1BA441;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover, .back-button:hover {
+    background-color: #169c34;
+}
+
+/* Футер */
+.footer {
+    background-color: #1BA441;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
