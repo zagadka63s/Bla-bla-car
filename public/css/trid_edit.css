@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Верхняя панель */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.header .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header .buttons button {
+    background-color: #1BA441;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header .buttons button:hover {
+    background-color: #158c34;
+}
+
+/* Основное содержимое */
+.content {
+    display: flex;
+    flex: 1;
+    padding: 40px 60px;
+}
+
+/* Боковое меню */
+.sidebar {
+    width: 250px;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #F9F9F9;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.sidebar-item.active, .sidebar-item:hover {
+    background-color: #1BA441;
+    color: #FFFFFF;
+}
+
+/* Основной блок */
+.main-content {
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Форма редактирования поездки */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form .form-group label {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+form .form-group input,
+form .form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form .submit-button {
+    background-color: #1BA441;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form .submit-button:hover {
+    background-color: #158c34;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    color: #1BA441;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    color: #158c34;
+}
+
+/* Футер */
+.footer {
+    background-color: #1BA441;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer .footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .footer-links a:hover {
+    text-decoration: underline;
+}

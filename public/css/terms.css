@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 body {
     background-color: #f0f0f0; 
     font-family: Arial, sans-serif;
 }
 
-<<<<<<< HEAD
 .header {
     background-color: #28a745;
     padding: 15px 20px;
@@ -50,11 +45,6 @@ body {
 .container {
     max-width: 800px;
     margin: 30px auto;
-=======
-.container {
-    max-width: 800px;
-    margin: 0 auto;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -68,7 +58,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
 h2 {
     font-size: 20px;
     font-weight: bold;
@@ -88,34 +77,6 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-=======
-.date {
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    color: #333;
-}
-
-p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #28a745; 
-    padding: 10px;
-    text-align: center;
-    color: white;
-    position: fixed; 
-    bottom: 0;
-    width: 100%;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 }
 
 footer a {
@@ -123,64 +84,3 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
 }
-<<<<<<< HEAD
-=======
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Кнопки */
-.nav {
-    background-color: white; 
-    padding: 10px 20px;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-}
-
-.nav ul li {
-    margin-left: 20px;
-}
-
-.nav ul li a {
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: #28a745; 
-    color: white;
-    border-radius: 5px;
-}
-
-.nav ul li a:hover {
-    background-color: #218838;
-}
-
-
-.header .logo {
-    float: left;
-    margin-left: 20px; 
-    font-size: 24px;
-    font-weight: bold;
-    color: #28a745;
-}
-
-
-strong {
-    font-weight: bold;
-}
-
-
-body {
-    margin: 0;
-    padding-bottom: 60px; 
-}
-
-.container {
-    margin-top: 20px;
-}
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4

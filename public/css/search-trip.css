@@ -3,21 +3,13 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
 }
 
-=======
-    overflow-x: hidden;
-}
-
-/* Верхняя панель навигации */
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 .top-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
-<<<<<<< HEAD
     padding: 20px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -250,116 +242,14 @@ body {
 .search-results {
     flex: 2;
     max-width: 700px;
-=======
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-}
-
-.top-navigation h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #434343;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 15px;
-    margin-right: 20px;
-}
-
-.nav-button {
-    padding: 10px 20px;
-    background-color: #1BA441;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.nav-button:hover {
-    background-color: #158c34;
-}
-
-.user-icon img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-/* Основной контейнер страницы поиска */
-.search-trip-container {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 40px;
-    width: 85%;
-    max-width: 1300px;
-    margin: 120px auto 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-}
-
-/* Левая колонка с фильтрами */
-.search-filters {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.search-filters label,
-.search-filters input,
-.search-filters select {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.search-filters input[type="range"] {
-    width: 100%;
-}
-
-.search-filters input,
-.search-filters select {
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.search-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #1BA441;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Правая колонка со списком водителей */
-.search-results {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.driver-list {
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-<<<<<<< HEAD
 .driver-photo {
-    flex: 0 0 90px; /* Уменьшаем размер фото */
-    margin-right: 20px;
+    flex: 0 0 80px; /* Размер контейнера для фото */
+    margin-right: 20px; /* Отступ справа */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,24 +264,28 @@ body {
 }
 .driver-block {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Выравнивание содержимого по вертикали */
     background-color: #FFFFFF;
-    border: 1px solid #1BA441; /* Уменьшенная толщина зелёной рамки */
+    border: 1px solid #1BA441;
     padding: 20px;
-    border-radius: 10px; /* Слегка увеличили закругление */
-    transition: transform 0.2s ease;
-}
-.driver-block:hover {
-    transform: scale(1.03); /* Легкое увеличение при наведении */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px; /* Закругленные углы */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Анимация при наведении */
 }
 
-.driver-photo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.driver-block:hover {
+    transform: scale(1.03); /* Легкое увеличение блока */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Тень при наведении */
 }
+
+
+.driver-avatar img {
+    width: 80px; /* Устанавливает фиксированную ширину */
+    height: 80px; /* Устанавливает фиксированную высоту */
+    border-radius: 50%; /* Делает изображение круглым */
+    object-fit: cover; /* Обрезает изображение, сохраняя пропорции */
+    border: 2px solid #1BA441; /* Рамка зеленого цвета */
+}
+
 
 .driver-info {
     flex: 1;
@@ -434,66 +328,127 @@ body {
 
 .footer-links a:hover {
     color: #CCCCCC;
-=======
-.driver-card {
-    display: flex;
-    background-color: #fff;
-    border: 1px solid #ddd;
+}
+
+/* Modal Style Adjustments */
+.modal {
+    width: 40%; /* Значительно уменьшаем ширину */
+    max-width: 500px; /* Ограничиваем максимальную ширину */
+    padding: 15px; /* Уменьшаем внутренние отступы */
     border-radius: 10px;
-    padding: 15px;
-    align-items: center;
-}
-
-.driver-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.driver-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.reserve-button {
-    padding: 10px;
-    background-color: #1BA441;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.reserve-button:hover {
-    background-color: #158c34;
-}
-
-/* Нижняя панель навигации (footer) */
-.footer {
-    background-color: #1BA441;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
     position: fixed;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.modal-header {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+.modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
+.modal-header .close {
+    cursor: pointer;
+    font-size: 20px;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+.modal-header .close:hover {
+    color: #000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column; /* Ставим содержимое в столбик */
+    align-items: center;
+    gap: 10px; /* Отступы между элементами */
+}
+.modal-image {
+    flex: 0 0 120px;
+    text-align: center;
+}
+
+.modal-image img {
+    width: 70px; /* Уменьшаем ширину аватара */
+    height: 70px; /* Уменьшаем высоту аватара */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1BA441;
+}
+
+.modal-info {
+    font-size: 12px; /* Уменьшаем шрифт текста */
+    text-align: center; /* Центрируем текст */
+    line-height: 1.4; /* Оптимизируем межстрочный интервал */
+    margin-bottom: 10px; /* Небольшой отступ внизу */
+}
+
+.modal-info .trip-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.modal-info .trip-details span {
+    font-weight: bold;
+    color: #1BA441;
+}
+
+.modal-info p {
+    margin: 10px 0;
+    line-height: 1.5;
+    font-weight: bold; /* Устанавливаем жирный текст */
+    color: #333; /* Добавляем контрастный цвет */
+}
+
+
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Пространство между кнопками */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.modal-footer button {
+    padding: 6px 12px; /* Меньше внутренний отступ */
+    font-size: 12px; /* Уменьшаем размер текста кнопок */
+    border-radius: 6px; /* Уменьшаем округление кнопок */
+    flex: 1;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+
+.modal-footer .message-btn {
+    background-color: #FF5733;
+    color: #fff;
+}
+
+.modal-footer .message-btn:hover {
+    background-color: #C44124;
+    transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+.modal-footer .book-btn {
+    background-color: #1BA441;
+    color: #fff;
+}
+
+.modal-footer .book-btn:hover {
+    background-color: #158c34;
+    transform: scale(1.05); /* Лёгкое увеличение */
 }

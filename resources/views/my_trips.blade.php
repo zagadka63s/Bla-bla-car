@@ -8,62 +8,66 @@
 </head>
 <body>
     <div class="container">
-        <!-- Верхняя панель -->
         <div class="header">
             <div class="logo">GoTogether</div>
             <div class="buttons">
-                <button>Знайти поїздку</button>
-                <button>Створити поїздку</button>
+                <a href="{{ route('trip.search') }}"><button>Знайти поїздку</button></a>
+                <a href="{{ route('trip.create') }}"><button>Створити поїздку</button></a>
             </div>
-            <div class="profile-icon"></div>
         </div>
 
-        <!-- Основное содержимое страницы -->
         <div class="content">
-            <!-- Левое боковое меню -->
             <div class="sidebar">
-                <div class="sidebar-item">Мій профіль</div>
-                <div class="sidebar-item active">Мої поїздки</div>
-                <div class="sidebar-item">Повідомлення</div>
-                <div class="sidebar-item">Сповіщення</div>
-                <div class="sidebar-item">Відгуки</div>
-                <div class="sidebar-item">Історія поїздок</div>
-                <div class="sidebar-item">Налаштування</div>
+                <a href="{{ route('profile') }}" class="sidebar-item">Мій профіль</a>
+                <a href="{{ route('trips') }}" class="sidebar-item active">Мої поїздки</a>
+                <a href="{{ route('messages') }}" class="sidebar-item">Повідомлення</a>
+                <a href="{{ route('notifications') }}" class="sidebar-item">Сповіщення</a>
+                <a href="{{ route('reviews') }}" class="sidebar-item">Відгуки</a>
+                <a href="{{ route('trip.history') }}" class="sidebar-item">Історія поїздок</a>
+                <a href="{{ route('settings') }}" class="sidebar-item">Налаштування</a>
             </div>
 
-            <!-- Основной блок с поездками -->
             <div class="main-content">
+                <h2>Мої поїздки</h2>
                 <div class="trip-list">
-                    <div class="trip-item">
-                        <div class="trip-info">
-                            <div class="trip-date">23 Жовтня 2024</div>
-                            <div class="trip-details">Львів - Київ</div>
+                    @if($trips->isEmpty())
+                        <p>У вас поки немає створених поїздок.</p>
+                    @else
+                        @foreach($trips as $trip)
+                        <div class="trip-item">
+                            <div class="trip-info">
+                                <div class="trip-date">
+                                    Дата: {{ $trip->departure_date }} в {{ $trip->departure_time }}
+                                </div>
+                                <div class="trip-details">
+                                    Маршрут: {{ $trip->departure_location }} → {{ $trip->arrival_location }}
+                                </div>
+                                <div class="trip-price">
+                                    Ціна: {{ $trip->price }} ₴
+                                </div>
+                                <div class="trip-seats">
+                                    Вільні місця: {{ $trip->available_seats }}
+                                </div>
+                            </div>
+                            <div class="trip-status">
+                                <!-- Кнопка "Видалити" -->
+                                <form action="{{ route('trip.destroy', ['id' => $trip->id]) }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="delete-button">Видалити</button>
+                                </form>
+
+                                <!-- Кнопка "Завершити поїздку" -->
+                                <form action="{{ route('trip.complete', ['id' => $trip->id]) }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    <button type="submit" class="complete-button">Завершити поїздку</button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="trip-status">
-                            <button class="view-button">Переглянути</button>
-                            <button class="edit-button">Редагувати</button>
-                        </div>
-                    </div>
-                    <div class="trip-item">
-                        <div class="trip-info">
-                            <div class="trip-date">15 Листопада 2024</div>
-                            <div class="trip-details">Одеса - Харків</div>
-                        </div>
-                        <div class="trip-status">
-                            <button class="view-button">Переглянути</button>
-                            <button class="edit-button">Редагувати</button>
-                        </div>
-                    </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
-        </div>
-
-        <!-- Футер -->
-        <div class="footer">
-            <div>©GoTogether - 2024 | Всі права захищені</div>
-            <div>Контакти</div>
-            <div>Політика конфіденційності</div>
-            <div>Умови користування</div>
         </div>
     </div>
 </body>

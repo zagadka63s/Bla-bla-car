@@ -8,25 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <!-- Верхняя панель -->
         <div class="header">
             <div class="logo">GoTogether</div>
             <div class="buttons">
-<<<<<<< HEAD
                 <a href="{{ route('trip.search') }}"><button class="main-button">Знайти поїздку</button></a>
                 <a href="{{ route('trip.create') }}"><button class="main-button">Створити поїздку</button></a>
             </div>
-=======
-                <a href="{{ route('trip.search') }}"><button>Знайти поїздку</button></a>
-                <a href="{{ route('trip.create') }}"><button>Створити поїздку</button></a>
-            </div>
-            <div class="profile-icon"></div>
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
         </div>
 
-        <!-- Основное содержимое страницы -->
         <div class="content">
-            <!-- Левое боковое меню -->
             <div class="sidebar">
                 <a href="{{ route('profile') }}" class="sidebar-item">Мій профіль</a>
                 <a href="{{ route('trips') }}" class="sidebar-item">Мої поїздки</a>
@@ -37,84 +27,97 @@
                 <a href="{{ route('settings') }}" class="sidebar-item">Налаштування</a>
             </div>
 
-            <!-- Основной блок с историей поездок -->
             <div class="main-content">
                 <h2>Історія поїздок</h2>
                 <div class="trip-list">
-                    <div class="trip-item">
-                        <img src="{{ asset('images/user1.png') }}" alt="User">
-                        <div class="trip-info">
-                            <div class="route">Київ - Львів</div>
-                            <div class="date">Дата: 15 Січня 2024</div>
+                    @forelse(auth()->user()->trips as $trip)
+                        <div class="trip-item">
+                            <img src="{{ $trip->user->avatar_path }}" alt="User Avatar" class="user-avatar">
+                            <div class="trip-info">
+                                <div class="route">{{ $trip->departure_location }} - {{ $trip->arrival_location }}</div>
+                                <div class="date">Дата: {{ \Carbon\Carbon::parse($trip->departure_date)->format('d M Y') }}</div>
+                            </div>
+                            <button class="review-button" data-trip-id="{{ $trip->id }}">Залишити відгук</button>
                         </div>
-<<<<<<< HEAD
-                        <button class="review-button">Залишити відгук</button>
-=======
-                        <button class="review-button" onclick="openModal()">Залишити відгук</button>
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
-                    </div>
-                    <div class="trip-item">
-                        <img src="{{ asset('images/user2.png') }}" alt="User">
-                        <div class="trip-info">
-                            <div class="route">Одеса - Харків</div>
-                            <div class="date">Дата: 20 Січня 2024</div>
-                        </div>
-<<<<<<< HEAD
-                        <button class="review-button">Залишити відгук</button>
-=======
-                        <button class="review-button" onclick="openModal()">Залишити відгук</button>
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
-                    </div>
+                    @empty
+                        <p>Немає записів про поїздки.</p>
+                    @endforelse
                 </div>
                 <a href="{{ url()->previous() }}" class="back-button">Назад</a>
             </div>
         </div>
 
-<<<<<<< HEAD
-=======
-        <!-- Модальное окно отзыва -->
-        <div id="reviewModal" class="modal">
+        <!-- Модальное окно -->
+        <div class="modal" id="reviewModal" style="display: none;">
             <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Ваш відгук</h2>
-                <img src="{{ asset('images/user1.png') }}" alt="User" class="user-avatar">
-                <p><strong>Ваша оцінка:</strong></p>
-                <select class="rating">
-                    <option value="5">5 зірок</option>
-                    <option value="4">4 зірки</option>
-                    <option value="3">3 зірки</option>
-                    <option value="2">2 зірки</option>
-                    <option value="1">1 зірка</option>
-                </select>
-                <textarea class="review-text" placeholder="Напишіть свій відгук..."></textarea>
-                <button class="submit-button">Надіслати</button>
-            </div>
-        </div>
-
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
-        <!-- Футер -->
-        <div class="footer">
-            <div>©GoTogether - 2024 | Всі права захищені</div>
-            <div class="footer-links">
-                <a href="#">FAQ</a>
-                <a href="#">Умови користування</a>
-                <a href="#">Політика конфіденційності</a>
-                <a href="#">Контакти</a>
+                <span class="close-button">&times;</span>
+                <h3>Залишити відгук</h3>
+                <form id="reviewForm" action="{{ route('reviews.store') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="trip_id" id="modal-trip-id">
+                    <div class="form-group">
+                        <label for="rating">Оцінка:</label>
+                        <select name="rating" id="rating" required>
+                            <option value="5">5 зірок</option>
+                            <option value="4">4 зірки</option>
+                            <option value="3">3 зірки</option>
+                            <option value="2">2 зірки</option>
+                            <option value="1">1 зірка</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Відгук:</label>
+                        <textarea name="comment" id="comment" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Надіслати</button>
+                </form>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-=======
 
     <script>
-        function openModal() {
-            document.getElementById("reviewModal").style.display = "block";
-        }
+        const modal = document.getElementById('reviewModal');
+        const closeModalButton = document.querySelector('.close-button');
+        const reviewButtons = document.querySelectorAll('.review-button');
+        const reviewForm = document.getElementById('reviewForm');
 
-        function closeModal() {
-            document.getElementById("reviewModal").style.display = "none";
-        }
+        reviewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tripId = button.getAttribute('data-trip-id');
+                document.getElementById('modal-trip-id').value = tripId;
+                modal.style.display = 'block';
+            });
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        reviewForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(reviewForm);
+            const response = await fetch(reviewForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                },
+            });
+
+            if (response.ok) {
+                alert('Відгук успішно збережено!');
+                modal.style.display = 'none';
+                reviewForm.reset();
+            } else {
+                alert('Помилка при відправленні відгуку.');
+            }
+        });
     </script>
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 </body>
 </html>

@@ -24,7 +24,7 @@
     <section class="hero">
         <h2>Групові подорожі країною</h2>
         <p>Знаходьте поїздку та заощаджуйте</p>
-        <form class="search-form" action="{{ route('trip.search') }}" method="GET" style="position: relative;">
+        <form class="search-form" action="{{ route('trip.search') }}" method="GET">
             <input type="text" id="departure" name="departure" placeholder="Місце відправки" autocomplete="off">
             <input type="text" id="destination" name="destination" placeholder="Місце прибуття" autocomplete="off">
             <input type="date" name="date" placeholder="Дата">
@@ -98,7 +98,7 @@
                 let val = this.value;
                 closeAllLists();
                 if (!val) return false;
-                
+
                 const list = $("<div>", { class: "autocomplete-list" }).css({
                     "position": "absolute",
                     "top": $(this).outerHeight() + "px",
@@ -112,9 +112,7 @@
                 cities.filter(city => city.toLowerCase().startsWith(val.toLowerCase())).forEach(city => {
                     $("<div>").text(city).css({
                         "padding": "10px",
-                        "cursor": "pointer",
-                        "color": "#333", /* Сделал текст темнее для видимости */
-                        "font-weight": "bold"
+                        "cursor": "pointer"
                     }).appendTo(list).click(function() {
                         input.value = city;
                         closeAllLists();

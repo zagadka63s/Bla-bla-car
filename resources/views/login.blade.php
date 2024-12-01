@@ -13,20 +13,29 @@
         </div>
         <div class="form-container">
             <h2>GoTogether</h2>
+
+            <!-- Flash Messages -->
+            @if (session('status'))
+                <div class="alert success">
+                    {{ session('status') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert error">
+                    {{ session('error') }}
+                </div>
+            @endif
+
             <form action="{{ route('login') }}" method="POST">
                 @csrf
                 <label for="email">Номер телефону або електронна адреса</label>
                 <input type="email" id="email" name="email" required>
 
                 <label for="password">Пароль</label>
-<<<<<<< HEAD
                 <div class="password-container">
                     <input type="password" id="password" name="password" required>
                     <span class="toggle-password" onclick="togglePassword()">👁</span>
                 </div>
-=======
-                <input type="password" id="password" name="password" required>
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 
                 <button type="submit">Увійти</button>
 
@@ -37,7 +46,6 @@
             </form>
         </div>
     </div>
-<<<<<<< HEAD
 
     <script>
         function togglePassword() {
@@ -52,7 +60,5 @@
             }
         }
     </script>
-=======
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 </body>
 </html>

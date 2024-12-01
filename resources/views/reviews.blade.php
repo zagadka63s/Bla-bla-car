@@ -32,54 +32,45 @@
 
             <!-- Основной блок отзывов -->
             <div class="main-content">
-<<<<<<< HEAD
                 <h2>Відгуки</h2>
-=======
-                <h1>Відгуки</h1>
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
-                <div class="review-list">
-                    <div class="review-item">
-                        <div class="user-info">
-                            <img src="{{ asset('images/user1.png') }}" alt="User">
-                            <div class="user-name">Іван Іванович</div>
+                <div class="search-container">
+                    <input type="text" id="reviewSearch" placeholder="Пошук відгуків..." class="search-input" onkeyup="searchReviews()">
+                </div>
+                <div class="review-list" id="reviewList">
+                    @foreach($reviews as $review)
+                        <div class="review-item">
+                            <div class="user-info">
+                                <img src="{{ $review->reviewer->avatar_path ?? asset('images/default-avatar.png') }}" alt="User Avatar">
+                                <div class="details">
+                                    <div class="user-name">{{ $review->reviewer_name }}</div>
+                                    <div class="review-time">{{ $review->created_at->format('d M Y, H:i') }}</div>
+                                </div>
+                            </div>
+                            <div class="review-text">{{ $review->comment }}</div>
+                            <div class="review-rating">{{ $review->rating }} ★</div>
                         </div>
-                        <div class="review-text">Відмінна поїздка, все пройшло гладко!</div>
-                        <div class="review-rating">4.5 ★</div>
-                    </div>
-                    <div class="review-item">
-                        <div class="user-info">
-                            <img src="{{ asset('images/user2.png') }}" alt="User">
-                            <div class="user-name">Вікторія Вікторівна</div>
-                        </div>
-                        <div class="review-text">Дуже сподобався водій і організація.</div>
-                        <div class="review-rating">5.0 ★</div>
-                    </div>
-<<<<<<< HEAD
-=======
-                    <!-- Добавьте другие отзывы здесь -->
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
+                    @endforeach
                 </div>
             </div>
         </div>
 
         <!-- Футер -->
         <div class="footer">
-<<<<<<< HEAD
             <div>©GoTogether - 2024 | Всі права захищені</div>
             <div class="footer-links">
                 <a href="#">FAQ</a>
                 <a href="#">Умови користування</a>
                 <a href="#">Політика конфіденційності</a>
                 <a href="#">Контакти</a>
-=======
-            <p>&copy; GoTogether - 2024 | Всі права захищені</p>
-            <div class="footer-links">
-                <a href="#">Контакти</a>
-                <a href="#">Політика конфіденційності</a>
-                <a href="#">Умови користування</a>
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
             </div>
         </div>
     </div>
+
+    <script>
+        function searchReviews() {
+            const input = document.getElementById('reviewSearch').value;
+            window.location.href = `?search=${input}`;
+        }
+    </script>
 </body>
 </html>

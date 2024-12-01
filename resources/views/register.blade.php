@@ -15,15 +15,14 @@
             <h2>Реєстрація в GoTogether</h2>
             <form action="{{ route('register') }}" method="POST">
                 @csrf
-<<<<<<< HEAD
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="name">Ім'я:</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="first_name">Ім'я:</label>
+                        <input type="text" id="first_name" name="first_name" required>
                     </div>
                     <div class="form-group">
-                        <label for="surname">Прізвище:</label>
-                        <input type="text" id="surname" name="surname" required>
+                        <label for="last_name">Прізвище:</label>
+                        <input type="text" id="last_name" name="last_name" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -65,24 +64,25 @@
                     <div class="form-group">
                         <label for="birth_day">Дата народження:</label>
                         <div class="birthdate-fields">
-                            <select name="day" id="birth_day" required>
+                            <select id="birth_day" required>
                                 <option value="">День</option>
                                 @for ($i = 1; $i <= 31; $i++)
                                     <option value="{{ $i }}">{{ $i }}</option>
                                 @endfor
                             </select>
-                            <select name="month" required>
+                            <select id="birth_month" required>
                                 <option value="">Місяць</option>
                                 @for ($i = 1; $i <= 12; $i++)
                                     <option value="{{ $i }}">{{ $i }}</option>
                                 @endfor
                             </select>
-                            <select name="year" required>
+                            <select id="birth_year" required>
                                 <option value="">Рік</option>
                                 @for ($i = now()->year; $i >= 1900; $i--)
                                     <option value="{{ $i }}">{{ $i }}</option>
                                 @endfor
                             </select>
+                            <input type="hidden" id="date_of_birth" name="date_of_birth">
                         </div>
                     </div>
                 </div>
@@ -90,62 +90,10 @@
                     <input type="checkbox" id="agreement" name="agreement" required>
                     <label for="agreement">Я погоджуюсь з <a href="{{ url('terms-of-use') }}">умовами використання</a> і <a href="{{ url('terms') }}">політикою конфіденційності</a>.</label>
                 </div>
-=======
-                <label for="name">Ім'я:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="gender">Стать:</label>
-                <select id="gender" name="gender" required>
-                    <option value="">Оберіть стать</option>
-                    <option value="male">Чоловік</option>
-                    <option value="female">Жінка</option>
-                </select>
-
-                <label for="phone">Номер телефону:</label>
-                <input type="text" id="phone" name="phone" required>
-
-                <label for="email">Електронна пошта:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="password_confirmation">Підтвердження пароля:</label>
-                <input type="password" id="password_confirmation" name="password_confirmation" required>
-
-                <label for="birthdate">Дата народження:</label>
-                <div class="birthdate-fields">
-                    <select name="day" required>
-                        <option value="">День</option>
-                        @for ($i = 1; $i <= 31; $i++)
-                            <option value="{{ $i }}">{{ $i }}</option>
-                        @endfor
-                    </select>
-                    <select name="month" required>
-                        <option value="">Місяць</option>
-                        @for ($i = 1; $i <= 12; $i++)
-                            <option value="{{ $i }}">{{ $i }}</option>
-                        @endfor
-                    </select>
-                    <select name="year" required>
-                        <option value="">Рік</option>
-                        @for ($i = now()->year; $i >= 1900; $i--)
-                            <option value="{{ $i }}">{{ $i }}</option>
-                        @endfor
-                    </select>
-                </div>
-
-                <div class="agreement">
-                    <input type="checkbox" id="agreement" name="agreement" required>
-                    <label for="agreement">Я погоджуюсь з <a href="#">умовами використання</a> і <a href="#">політикою конфіденційності</a>.</label>
-                </div>
-
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
                 <button type="submit">Зареєструватися</button>
             </form>
         </div>
     </div>
-<<<<<<< HEAD
 
     <script>
         function togglePassword() {
@@ -161,8 +109,26 @@
                 }
             });
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const dayField = document.querySelector('#birth_day');
+            const monthField = document.querySelector('#birth_month');
+            const yearField = document.querySelector('#birth_year');
+            const dateOfBirthField = document.querySelector('#date_of_birth');
+
+            function updateDateOfBirth() {
+                const day = dayField.value.padStart(2, '0');
+                const month = monthField.value.padStart(2, '0');
+                const year = yearField.value;
+                if (day && month && year) {
+                    dateOfBirthField.value = `${year}-${month}-${day}`;
+                }
+            }
+
+            dayField.addEventListener('change', updateDateOfBirth);
+            monthField.addEventListener('change', updateDateOfBirth);
+            yearField.addEventListener('change', updateDateOfBirth);
+        });
     </script>
-=======
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 </body>
 </html>

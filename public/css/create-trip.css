@@ -8,49 +8,28 @@ body {
 
 /* Верхняя панель (header) */
 .top-navigation {
-<<<<<<< HEAD
     position: fixed;
     width: 100vw;
     height: 92px;
-=======
-    position: absolute;
-    width: 100vw;
-    height: 92px;
-    left: 0;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     top: 0;
     background: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
     padding: 0 40px;
     box-sizing: border-box;
-=======
-    padding: 0 40px; /* Увеличили отступ */
-    box-sizing: border-box;
-    color: #434343;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     z-index: 10;
 }
 
 .logo-text {
     font-size: 36px;
     font-weight: 700;
-<<<<<<< HEAD
     color: #434343;
-=======
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 }
 
 .nav-buttons {
     display: flex;
-<<<<<<< HEAD
     gap: 25px;
-=======
-    gap: 25px; /* Увеличили расстояние между кнопками */
-    margin-right: 20px; /* Смещаем кнопки вправо */
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 }
 
 .nav-button {
@@ -66,7 +45,6 @@ body {
     background-color: #158c34;
 }
 
-<<<<<<< HEAD
 /* Страница создания поездки */
 .container {
     display: flex;
@@ -86,30 +64,6 @@ body {
 
 
 
-=======
-.user-icon img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-/* Страница создания поездки */
-.create-trip-form {
-    width: 45%; /* Ширина формы */
-    padding: 40px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    box-sizing: border-box;
-    position: relative;
-    left: 5%; /* Отступ слева для выравнивания */
-    margin-top: 120px; /* Отступ сверху для нижней панели */
-    border-radius: 8px;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
-}
-
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 .form-title {
     font-size: 32px;
     font-weight: 800;
@@ -120,28 +74,18 @@ body {
 .form-description {
     color: #6A6A6A;
     font-size: 16px;
-<<<<<<< HEAD
-=======
-    font-weight: 600;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     margin-bottom: 20px;
 }
 
 .create-trip-form label {
     font-weight: bold;
-<<<<<<< HEAD
     margin-bottom: 5px;
     display: block;
     color: #404040;
-=======
-    color: rgba(0, 0, 0, 0.85);
-    margin-bottom: 5px;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 }
 
 .create-trip-form input,
 .create-trip-form select {
-<<<<<<< HEAD
     width: 100%; /* Заполняет весь доступный контейнер */
     height: 48px; /* Задаем одинаковую высоту */
     box-sizing: border-box; /* Учитываем padding и border в ширине и высоте */
@@ -188,56 +132,6 @@ body {
     position: fixed;
     width: 100vw;
     height: 92px; /* Делаем высоту, как у верхней панели */
-=======
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #D9D9D9;
-    border-radius: 8px;
-    font-size: 14px;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
-    color: #6A6A6A;
-}
-
-/* Кнопка отправки */
-.submit-button {
-    padding: 15px;
-    background-color: #1BA441;
-    color: white;
-    font-weight: 700;
-    border: none;
-    border-radius: 13px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    font-size: 16px;
-    text-align: center;
-}
-
-.submit-button:hover {
-    background-color: #158c34;
-}
-
-/* Блок с изображением */
-.trip-image {
-    position: absolute;
-    width: 50%;
-    right: 0;
-    top: 120px;
-    height: calc(100vh - 162px); /* Учитываем высоту верхней и нижней панели */
-    background-image: url('/images/car_image.jpg'); /* Путь к картинке */
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-}
-
-/* Нижняя панель (footer) */
-.footer {
-    position: absolute;
-    width: 100vw;
-    height: 70px;
-    left: 0;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
     bottom: 0;
     background: #1BA441;
     text-align: center;
@@ -245,27 +139,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     gap: 20px;
     z-index: 10;
     padding: 0 40px; /* Такой же отступ, как в top-navigation */
     box-sizing: border-box; /* Убедимся, что padding входит в общую ширину */
-=======
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 10;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-.footer-links {
-    margin-left: 10px;
-    display: flex;
-    gap: 10px;
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
 }
 
 .footer-links a {
@@ -276,8 +153,4 @@ body {
 
 .footer-links a:hover {
     text-decoration: underline;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c91c4d7ada0cd075785f672445ecf866378a3ac4
